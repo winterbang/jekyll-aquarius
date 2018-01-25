@@ -1,0 +1,10 @@
+title: MY Blog
+logo_url: ''
+
+social:
+  - github
+  - twitter
+defaults:
+  - values:
+      layout: "default"
+      icon: "book"
