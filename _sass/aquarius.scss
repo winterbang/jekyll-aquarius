@@ -431,6 +431,7 @@ pre code::after {font-size: 1rem;color: #BFBFBF;position: absolute;top: 5px;righ
    .post-page .post-content .post-tags{display:inherit;}
 }
 @media(max-width:580px){
+   .navbar-logo{font-size: 24px;}
    .navbar-search form{width:150px;}
    .index-page{padding:80px 0 0;}
    .archive-page{padding:80px 0 20px;}
