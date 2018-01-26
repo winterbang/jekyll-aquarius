@@ -47,13 +47,13 @@ $(document).ready(function () {
     }
   });
 
-  $("#cb-close-btn").click( function () {
+  $("#cb-close-btn").on('click touchstart', function () {
     $(".cb-search-tool").css("display", "none");
     show = false;
     time1 = 0;
   });
 
-  $("#cb-search-btn").click(function(){
+  $("#cb-search-btn").on('click touchstart', function(){
     $(".cb-search-tool").css("display", "block");
     show = true;
     $("#cb-search-content").val("");

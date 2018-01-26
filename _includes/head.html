@@ -16,13 +16,13 @@
   <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
   <meta name="og:keywords"  content="{{ page.title }} - {{ site.title }}|{{ page.content | strip_html | strip_newlines | truncate: 120 }}" property='og:description' />
   <meta name="Jekyll aquarius by winter" content="#eb5055">
-  <link rel="icon" type="image/png" href="{{ site.url }}/style/favicons/favicon.ico" />
-  <link href="{{ site.url }}/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
+  <link rel="icon" type="image/png" href="{{ site.url }}/favicon.ico" />
+  <link href="{{ site.url }}/favicon.ico" rel="shortcut icon" type="image/png">
   <link rel="canonical" href="{{ site.url }}/">
   <link rel="alternate" type="application/rss+xml" title="Winter" href="{{ site.url }}/feed.xml">
   <meta charset="UTF-8">
   <link rel="manifest" href="/manifest.json">
-  <link rel="shortcut icon" href="{{ site.url }}/style/favicons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon">
   <meta name="keywords"  content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}" property='og:description' />
   <meta name="description" content="nothing is more practicla than a good theory" />
   <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
@@ -48,11 +48,14 @@
 {% endif %}
 {% if site.facebook_appid %}
 <meta content="{{ site.facebook_appid }}" property="fb:app_id" />
-<script>(function(d, s, id) {
+<script>
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
+  js = d.createElement(s);
+  js.id = id;
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId={{ site.facebook_appid }}";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+} (document, 'script', 'facebook-jssdk'));
+</script>
 {% endif %}
