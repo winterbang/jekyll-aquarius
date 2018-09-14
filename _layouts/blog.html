@@ -6,6 +6,7 @@
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
     <title>{{ page.title }} - {{ site.title }}</title>
     {% include head.html %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
   </head>
 <body class="" gtools_scp_screen_capture_injected="true">
 {% include header.html %}
@@ -101,10 +102,13 @@
 		</div>
 	</div>
 </div>
+<div class="comment-container">
+  <div id="comments"></div>
+</div>
 {% include foot.html %}
 <!--winterconnnet-menu-->
 <div id="directory-content" class="directory-content">
-    <div id="directory"></div>
+  <div id="directory"></div>
 </div>
 <!--winterconnnet-menu-->
 <script>

@@ -62,6 +62,23 @@
 <script src="{{ "/assets/js/qrcodejs.js" }}"></script>
 <script src="{{ "/assets/js/action.js" }}"></script>
 <script src="{{ "/assets/js/cb-search.js" }}"></script>
+{% if site.comments %}
+  {% if site.comments.gitalk %}
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<script>
+		  var gitalk = new Gitalk({
+		    clientID: '{{ site.comments.gitalk_clientID}}',
+		    clientSecret: '{{ site.comments.gitalk_secret }}',
+		    repo: '{{ site.comments.gitalk_repo }}',
+		    owner: '{{ site.comments.gitalk_owner }}',
+		    admin: '{{ site.comments.gitalk_admin }}',
+		    id: location.pathname,
+		    distractionFreeMode: '{{ site.comments.distractionFreeMode}}'
+		  })
+		  gitalk.render('comments')
+		</script>
+  {% endif %}
+{% endif%}
 <script>
 $(function () {
   setTimeout(function () {
