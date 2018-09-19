@@ -8,3 +8,8 @@ defaults:
   - values:
       layout: "default"
       icon: "book"
+rss: rss
+theme: jekyll-aquarius
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

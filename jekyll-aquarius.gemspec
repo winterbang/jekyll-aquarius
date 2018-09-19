@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-aquarius"
-  spec.version       = "0.1.3"
+  spec.version       = "0.1.4"
   spec.authors       = ["winter"]
   spec.email         = ["zwtao90@gmail.com"]
 
   spec.summary       = '轻量级自适应 简洁 卡片式博客主题 '
-  spec.homepage      = "https://github.com/winterbang"
+  spec.homepage      = "https://github.com/winterbang/jekyll-aquarius"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
