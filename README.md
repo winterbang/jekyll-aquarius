@@ -18,7 +18,7 @@ gem "jekyll-aquarius"
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-aquarius
+remote_theme: winterbang/jekyll-aquarius
 ```
 
 And then execute:
