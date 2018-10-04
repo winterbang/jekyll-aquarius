@@ -13,3 +13,5 @@ theme: jekyll-aquarius
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+comments:
+  gitalk: true
