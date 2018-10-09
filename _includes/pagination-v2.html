@@ -20,23 +20,29 @@
        {% endif %}
       </li>
 
+      {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li {% if paginator.page == trail.num %}class="current"{% endif %}>
+              <a href="{{ trail.path | prepend: site.baseurl }}" data-hover="{{trail.num}}" title="{{trail.title}}">{{ trail.num }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
+
      {% for i in (1..paginator.total_pages) limit:6 offset:{{paginator.page-1}} %}
-       <li {% if paginator.page == trail.num %}class="current"{% endif %}>
-          <a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', i }}" data-hover="{{i}}" title="{{i}}">{{ i }}</a>
-       </li>
+
      {% endfor %}
 
   <li class="current">
-    {% if paginator.page == paginator.total_pages %}
-    <span>&raquo;</span>
-    {% else %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" data-hover="&raquo;">
-        <span>&raquo;</span>
-    </a>
-    {% endif %}
+      {% if paginator.page == paginator.total_pages %}
+      <span>&raquo;</span>
+      {% else %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" data-hover="&raquo;">
+          <span>&raquo;</span>
+      </a>
+      {% endif %}
   </li>
   <li {% if paginator.page == paginator.total_pages %} class="current" {% endif %}>
-    <a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', paginator.total_pages }}" data-hover="末页">
+    <a href="{{paginator.last_page_path | prepend: site.baseurl }}" data-hover="末页">
       <span>末页</span>
     </a>
   </li>

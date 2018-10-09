@@ -18,16 +18,14 @@ comments:
 autopages:
   enabled: true
 # 分页
-pagination:
-  enabled: true
-  # collection: 'posts'
-  extension: html
-  permalink: '/:num/'
-  title: ':title | :num of :max'
-  sort_field: 'date'
-  sort_reverse: true
-  per_page: 6
-  limit: 0
-  trail:
-    before: 2 # The number of links before the current page
-    after: 2
+# pagination:
+#   enabled: truess
+#   permalink: '/:num/'
+#   title: ':title | :num of :max'
+#   sort_field: 'date'
+#   sort_reverse: true
+#   per_page: 6
+#   limit: 0
+#   trail:
+#     before: 2 # The number of links before the current page
+#     after: 2
