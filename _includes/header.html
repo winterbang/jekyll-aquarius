@@ -8,7 +8,7 @@
 			{% endif %}
 		</a>
     <div class="navbar-menu">
-      {% for link in site.links %}
+      {% for link in site.data.navs %}
     	<a href="{{ link.url }}"  title="访问 {{ link.name }}" data-hover="{{link.name}}">{{ link.name }}</a>
       {% endfor %}
     </div>

@@ -1,0 +1,31 @@
+<div class="post-list-item">
+  <div class="post-list-item-container">
+    {% if include.post.cover-image %}
+      {% assign img_url = include.post.cover-image %}
+    {% else user.name == 'bob' %}
+      {% assign img_url = "/assets/images/card_bg_default.jpg" %}
+    {% endif %}
+    <div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{img_url}}');"></div>
+    <a href="{{ posts.url }}">
+      <div class="item-desc">
+        <p>{{ include.post.content | strip_html | strip_newlines | truncate: 100 }}</p>
+      </div>
+    </a>
+    <div class="item-slant reverse-slant  bg-{{ posts.background }}"></div>
+    <div class="item-slant">
+      <div class="cover-tag">原创</div>
+    </div>
+    <div class="item-label">
+      <div class="item-title">
+        <a href="{{ include.post.url }}" title="访问 {{ include.post.title }}">{{ include.post.title }}</a>
+      </div>
+      <div class="item-meta clearfix">
+        <div class="item-meta-ico bg-ico-{{posts.icon}}" style="background: url('/assets/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+        <div class="item-meta-cat">
+          <a href="/tags#{{ include.posts.category }}" title="访问 {{ include.post.category }}" data-hover="{{ include.post.category }}">{{ include.post.category }}</a>
+          <a href="/archives#{{ include.post.date | date: "%Y"}}" title="访问 {{ include.post.date | date: "%Y"}}" data-hover="{{ include.post.date | date: "%F %H:%M"}}">{{ include.post.date | date: "%F %H:%M"}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
