@@ -6,12 +6,12 @@
       {% assign img_url = "/assets/images/card_bg_default.jpg" %}
     {% endif %}
     <div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{img_url}}');"></div>
-    <a href="{{ posts.url }}">
+    <a href="{{ include.post.url }}">
       <div class="item-desc">
         <p>{{ include.post.content | strip_html | strip_newlines | truncate: 100 }}</p>
       </div>
     </a>
-    <div class="item-slant reverse-slant  bg-{{ posts.background }}"></div>
+    <div class="item-slant reverse-slant  bg-{{ include.post.background }}"></div>
     <div class="item-slant">
       <div class="cover-tag">原创</div>
     </div>
