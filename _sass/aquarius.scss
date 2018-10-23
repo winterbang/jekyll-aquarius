@@ -414,7 +414,6 @@
 .navbar-search:focus>form {
     overflow: inherit;
     clip: inherit;
-    -webkit-transition: opacity 500ms ease-in-out;
     transition: opacity 500ms ease-in-out;
     opacity: 1;
 }
@@ -429,7 +428,7 @@
     line-height: 30px;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 85px;
     display: block;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
