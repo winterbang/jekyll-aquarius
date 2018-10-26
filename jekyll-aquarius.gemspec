@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-aquarius"
-  spec.version       = "0.1.9"
+  spec.version       = "0.2.0"
   spec.authors       = ["winter"]
   spec.email         = ["zwtao90@gmail.com"]
 
