@@ -9,7 +9,9 @@
 		</a>
     <div class="navbar-menu">
       {% for link in site.data.navs %}
-    	<a href="{{ link.url }}"  title="访问 {{ link.name }}" data-hover="{{link.name}}">{{ link.name }}</a>
+
+        {% assign current_nav = link.url | remove_first:'/' %}
+    	  <a href="{{ link.url }}"  title="访问 {{ link.name }}" data-hover="{{link.name}}" class="{%if page.collection == current_nav %}active{% endif%}">{{ link.name }}</a>
       {% endfor %}
     </div>
     <div class="navbar-search">

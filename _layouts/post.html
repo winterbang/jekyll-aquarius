@@ -9,7 +9,7 @@
   </head>
 <body class="" gtools_scp_screen_capture_injected="true">
 {% include header.html %}
-<div class="post-header-thumb bg-white}">
+<div class="post-header-thumb bg-white">
 	<div class="post-header-thumb-op"></div>
 	<div class="post-header-thumb">
 		<div class="post-header-thumb-container">
@@ -26,10 +26,10 @@
       {% assign tags_list = page.tags %}
       {% if tags_list.first[0] == null %}
       {% for tag in tags_list %}
-          <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
+        <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
           {{ tag }} <span>({{ site.tags[tag].size }})</span>
           {% unless forloop.last %}{% endunless %}
-</a>
+        </a>
       {% endfor %}
       {% else %}
       {% for tag in tags_list %}

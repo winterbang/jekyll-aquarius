@@ -4,10 +4,7 @@ layout: default
 <div class="main-content index-page clearfix ">
 	<div class="post-lists">
 		<div class="post-lists-body">
-      {% for post in paginator.posts %}
-				{% include cards.html post=post %}
-      {% endfor %}
+      {{ content }}
 		</div>
 	</div>
 </div>
-{% include pagination.html %}
