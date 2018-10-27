@@ -6,6 +6,7 @@
          <span>首页</span>
        </a>
      </li>
+
      <li {% if paginator.page == 1 %} class="current" {% endif %}>
        {% if paginator.page == 1 %}
          <span>&laquo;</span>
@@ -21,8 +22,12 @@
       </li>
 
      {% for i in (1..paginator.total_pages) limit:6 offset:{{paginator.page-1}} %}
-       <li {% if paginator.page == trail.num %}class="current"{% endif %}>
-          <a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', i }}" data-hover="{{i}}" title="{{i}}">{{ i }}</a>
+       <li {% if paginator.page == i %}class="current"{% endif %}>
+         {% if i == 1 %}
+            <a href="/">{{ i }}</a>
+         {% else %}
+            <a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', i }}" data-hover="{{i}}" title="{{i}}">{{ i }}</a>
+         {% endif %}
        </li>
      {% endfor %}
 
